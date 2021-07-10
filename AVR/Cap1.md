@@ -168,6 +168,14 @@ O endereço 0x24 apresenta o DDRB e o 0x25 PORTB (como apresentado pela figura d
 ![Figura 6](imagens/GDBrun.png "run")
 
 
+# Exercicio
+
+Algumas atividades que podem fazer para entender um pouco mais e tentar se divertir
+
+1 - Faça o LED piscar (na pratica você teria que usar o [util/delay.h](6), mas o gdb não consegue utilizar direito, então faça apenas a alteração de estados usando o step do gdb) (o gabarito deste exercicio esta em code/blink.c)
+
+2 - Faça um semáforo (o mesmo problema do timer existe aqui, utilize o step do gdb como no exercicio anterior)
+
 
 [1]: https://www.nongnu.org/avr-libc/user-manual/install_tools.html#install_avr_binutils
 
@@ -178,3 +186,5 @@ O endereço 0x24 apresenta o DDRB e o 0x25 PORTB (como apresentado pela figura d
 [4]: https://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf
 
 [5]: http://ww1.microchip.com/downloads/en/devicedoc/atmel-0856-avr-instruction-set-manual.pdf
+
+[6]: https://www.nongnu.org/avr-libc/user-manual/group__util__delay.html
