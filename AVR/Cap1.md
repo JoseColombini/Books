@@ -85,16 +85,16 @@ Para entendermos estes comandos vamos explorar um pouco a arquitetura AVR e seus
 
 Como exemplo o chip do popular ATmega328P, cuja o diagrama de blocos e o encapsulamento, retirados de datasheets da atmel estão apresentados a seguir ([datasheet 1](3) [datasheet 2](4)).
 
-![Figura 1](blockDiagram.png "Diagrama de blocos")
+![Figura 1](imagens/blockDiagram.png "Diagrama de blocos")
 
 
-![Figura 2](pinout.png "PinOut")
+![Figura 2](imagens/pinout.png "PinOut")
 
 Podemos ver através das figuras que o PORTB e o DDRB tem uma relação bem ínitima com o pinout do chip, mas como eles se relacionam?
 
 Estes nomes **PORTx** e **DDRx** são os nomes dados para os registradores relacionados aos pinos **Px**, onde x pertence a [A, B, C, D]. Cada agrumento de pinos tem suas particularidades, que não convém apresentá-las a fundo agora, porém convém entender um pouco mais sobre os registradores, apresentados nesta figura.
 
-![Figura 3](Register.png "Registradores")
+![Figura 3](imagens/Register.png "Registradores")
 
 A arquitetura AVR usada neste chuip é um arquitetura 8 bits,e de forma condizente os registradores são de 8 bits. Também é interessante observar que estes registradores estão mapeados no endereço de memória (0x25 para o PORTB).
 
@@ -144,7 +144,7 @@ Ao abrir o gdb vocẽ precisará definir como simulação e carrear o código no
 ```
 Agora aperte "ctrl+x" e depois 2, desta forma vai aparecer a tabela de registradores de propósito geral e o código (apertar varias vezes essa combinação de botões para apresentar diferentes telas)
 
-![Figura 4](gdb.png "GDB")
+![Figura 4](imagens/gdb.png "GDB")
 
 Agora com esta tela em visível vamos utilizar o comando para verificar o que esta no registrador DDRB e PORTB. Como eles são de apenas 1 byte (2 hexadecimais). Vamos ve-los com o seguintes comando x/xb [endereço], que permite ver o em hexadecimal o byte do endereço escolhido.
 
@@ -165,7 +165,7 @@ Se dermos a seguinte lista de comandos teremos o resultado apresentado na figura
 
 O endereço 0x24 apresenta o DDRB e o 0x25 PORTB (como apresentado pela figura dos registrados la em cima). O primeiro step executa a linha **DDRB = 0xFF**, portanto 0x24 se torna FF e somente depois de executar o laço temos que 0x25 (**PORTB**) com FF
 
-![Figura 6](GDBrun.png "run")
+![Figura 6](imagens/GDBrun.png "run")
 
 
 
