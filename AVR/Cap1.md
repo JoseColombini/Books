@@ -10,17 +10,17 @@ A arquitutura AVR é basesada no RISC de Harvard e sua definição é disponibil
 
 Para este tutorial, que visa a familiarização com a parte técnica da programação em C em baixissimo nível de abstração, será apresentado o passo a passo mais técnico, abordando superficialmente as teorías relacionadas.
 
-Para este Tutorial recomenda-se ja saber:
+Para este Tutorial recomenda-se ja saber conceitos básicos de programação e um pouco de familiaridade com a linguagem C.
 
 
 O documento a seguir esta organizado em:
 - [Instalação](#Instalação)
-- Ligar um LED
-    - Registradores
-- avr-gcc
-    - Assembly
-    - Executável
-- Exercícios
+- [Ligar LED](#Ligar-LED)
+    - [Registradores](#Um-pouco-da-arquitetura-AVR)
+- [avr-gcc](#avr-gcc)
+    - [Assembly](#Assembly)
+    - [Executável](#Executável)
+- [Exercícios](#Exercicio)
 
 # Instalação
 
@@ -36,7 +36,7 @@ sudo apt install gdb-avr
 
 Depois deste itens instalados estamos com um ambiente pronto para fazer cross compile de códigos para arquitetura AVR e realizar uma simulação com o gdb, caso queira fazer o upload para um chip será necessário outros pacotes
 
-# LED On
+# Ligar LED
 
 Para entendermos como programar um Atmega vamos usar como exemplo um código simples e usaremos engenharia reversa para entender um pouco mais.
 
