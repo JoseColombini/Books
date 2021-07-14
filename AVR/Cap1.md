@@ -2,21 +2,25 @@
 
 Neste tutorial utilizaremos a arquitetura AVR, as justificativas para tal são:
 
-- Ele possui todo o ferramental disponibilizado pela Atmel em open source pelo GCC/GDB (diferente da arquietetura PIC)
-- Caso você queira relizar uma implementação real você encontra um chip Atmel em qualquer lugar e barato, visto que eles são utilizados nas placas Arduino
-- Se desejar aprender usando um Arduino sinta-se avontade, a ideia de utilizar o avr-libc para programar é para um questão didatica de manter você o mais próximo do hardware, o que acontece na maioria dos casos de programação de MCU. Raros casos você encontrará uma plataforma de programação amigável como o Arduino, pois ela não tão otimizado 
+- Ele possui todo o ferramental disponibilizado pela Atmel em open source pelo GCC/GDB (diferente da arquietetura PIC);
+- Caso você queira relizar uma implementação real você encontrará um chip Atmel em qualquer lugar e barato, visto que eles são utilizados nas placas Arduino;
+- Se desejar aprender usando um Arduino sinta-se avontade, a ideia de utilizar o avr-libc para programar é para um questão didatica de manter você o mais próximo do hardware, o que acontece na maioria dos casos de programação de MCU. Raros casos você encontrará uma plataforma de programação amigável como o Arduino, pois ela não são tão otimizadas.
 
-A arquitutura AVR é basesada no RISC de Harvard e sua definição é disponibilizada pela Atmel(Microchip atual proprietária). Eventualmente posso publicar algo mais especifico sobre estas arquiteturas.
+A arquitutura AVR é basesada no RISC de Harvard e sua definição é disponibilizada pela Atmel (Microchip atual proprietária). Eventualmente posso publicar algo mais especifico sobre estas arquiteturas.
 
-Para este tutorial que visa a familiarização da parte técnica com programação em C de baixissimo nível de abstração será apresentado mais o passo a passo técnico.
+Para este tutorial, que visa a familiarização com a parte técnica da programação em C em baixissimo nível de abstração, será apresentado o passo a passo mais técnico, abordando superficialmente as teorías relacionadas.
+
+Para este Tutorial recomenda-se ja saber:
+
 
 O documento a seguir esta organizado em:
-- Instalação
+- [Instalação](#Instalação)
 - Ligar um LED
     - Registradores
 - avr-gcc
     - Assembly
     - Executável
+- Exercícios
 
 # Instalação
 
